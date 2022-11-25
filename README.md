@@ -26,3 +26,34 @@ This project is to predict whether a question on quora has a similar existing qu
     * Binary confusion matrix
 2. Train-Test Construction
     * Train and test will be built from the dataset by splitting it in 80:20 ratio
+
+## Class Distribution
+![class_distribution](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/class%20distribution.png 'Class Distribution')   
+* The graph shows how the dataset is distributed for both classes, duplicate(1) and non-duplicate(0). 
+
+## Question Distribution
+![question_distribution](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/unique_repeated.png 'Question Distribution')  
+* The graph shows how the unique and repeated questions have been distributed in the dataset. 
+
+## Number of Occurences of Each Question
+![question_occurences](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/occ_unique_ques.png 'Question Occurences')
+* The graph is Log histogram of number of occurences of unique question
+
+## Word Clouds for Duplicate and Non-duplicate Questions 
+* Duplicate Question:
+![wordcloud_1](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/WC_dup.png 'Duplicate Questions')
+* Non-duplicate Question:
+![wordcloud_2](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/WC_ndup.png 'Non-Duplicate Questions')
+
+**NOTE - 24 new features were created including token features**  
+
+## Model : GBDT
+![GBDT](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/gbdt.png 'Heat-map')
+
+**From above heatmap of log-loss for different pairs of estimators, estimator 500 and depth 10 is giving least log-loss of 0.299 for training and 0.341 for testing** 
+
+## Conclusion : Model Performance
+* Table showing all model performances:
+![pretty_table](https://github.com/shubhampandkar/Quora_Question_pair/blob/main/images/prettytable.png 'Pretty Table')
+
+* Best model : GBDT with TFIDF vectors giving test log-loss of 0.3415
